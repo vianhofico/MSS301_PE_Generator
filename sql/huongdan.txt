@@ -1,0 +1,1 @@
+Ném 2 file txt của đề vào /sql, xóa huongdan.txt này đi rồi chạy dựa án
