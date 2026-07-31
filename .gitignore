@@ -17,3 +17,4 @@ hs_err_pid*.log
 # cac ten hay dung nhat. Neu ten khac, xoa tay sau khi test xong.
 /*_PE/
 /*_OUT/
+/sql/*
