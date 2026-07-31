@@ -41,6 +41,8 @@ Chỉ 8 thứ này, đừng đọc lan man:
 
 ## Bước 3 — Chạy tool
 
+Copy file `.sql`/`.txt` của đề vào thẳng thư mục `sql/` (2 thư mục con `sql/pe1_hotel/` và `sql/lab02_hr/` chỉ là **đề mẫu** để đối chiếu, không ảnh hưởng gì — cứ để nguyên):
+
 ```bash
 java Generator.java sql/*.txt
 ```
@@ -74,7 +76,7 @@ cd PE_GENERATOR
 java Generator.java sql/*.txt
 ```
 
-Không truyền tham số thì tool tự quét `sql/` rồi tới thư mục hiện tại, lấy mọi file `.sql`/`.txt` có chứa `CREATE TABLE`.
+Không truyền tham số thì tool tự quét `sql/` rồi tới thư mục hiện tại, lấy mọi file `.sql`/`.txt` có chứa `CREATE TABLE`. Quét **không đệ quy** — chỉ lấy file nằm trực tiếp trong `sql/`, nên 2 thư mục con `sql/pe1_hotel/` và `sql/lab02_hr/` (đề mẫu) không bị gộp nhầm vào đề thật bạn vừa thả vào.
 
 ## Phím tắt khi trả lời
 
@@ -83,15 +85,16 @@ Không truyền tham số thì tool tự quét `sql/` rồi tới thư mục hi�
 | `Enter` | Nhận giá trị mặc định trong `[...]` |
 | `!` | Nhận mặc định cho **toàn bộ** câu hỏi còn lại (kể cả câu đang gõ) |
 
-### Chỉ 3 loại câu KHÔNG dùng `!` được — bắt buộc gõ tay
+### Chỉ 4 loại câu KHÔNG dùng `!` được — bắt buộc gõ tay
 
 | Câu hỏi | Vì sao không có mặc định |
 |---|---|
 | Mã sinh viên | Duy nhất theo từng người, tool không đoán được |
+| Tên project Gateway | Đề đặt tên khác nhau (`HotelGateway`, `EmployeeGateway`...) — không có mặc định nào đúng chung. Sai tên project là **vi phạm mục 2.5, bị chấm 0** |
 | Port từng service (8081, 8082…) | Phải chắc mỗi service 1 port riêng |
 | Port Gateway | Tương tự |
 
-Gõ `!` ở 3 câu này **không bị bỏ qua** — tool cảnh báo và bắt gõ lại giá trị thật:
+Gõ `!` ở 4 câu này **không bị bỏ qua** — tool cảnh báo và bắt gõ lại giá trị thật:
 
 ```text
 Ma sinh vien (vd HE181534): !

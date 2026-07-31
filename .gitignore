@@ -1,0 +1,19 @@
+# Output cua trinh bien dich IntelliJ khi chay Generator.java tu IDE
+/out/
+
+# hs_err_pid*.log sinh ra khi JVM crash
+hs_err_pid*.log
+
+# Class file bien dich rieng le (vd javac -d /tmp ... khi test)
+*.class
+
+# dap-an.txt o thu muc goc la file tam sinh ra khi CHAY THU tool ngay trong
+# PE_GENERATOR/ (java Generator.java sql/*.txt). Khong phai file mau - file
+# mau that la dap-an-mau-PE1.txt / dap-an-mau-LAB02.txt (co giu lai).
+/dap-an.txt
+
+# Project duoc SINH RA khi chay thu tool ngay trong thu muc nay se tao ra
+# 1 thu muc <ten_project>_PE/ moi lan test - dung .gitignore mau nay chan
+# cac ten hay dung nhat. Neu ten khac, xoa tay sau khi test xong.
+/*_PE/
+/*_OUT/

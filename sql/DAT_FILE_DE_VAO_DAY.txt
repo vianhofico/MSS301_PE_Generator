@@ -1,0 +1,11 @@
+Thu muc nay de TRONG khi khong co ky thi nao dang chay.
+
+Khi vao phong thi: copy file .sql/.txt cua de (vd create_rooms_sql.txt,
+create_reservations_sql.txt) vao THANG thu muc nay, roi chay:
+
+    java Generator.java sql/*.txt
+
+Tool tu quet moi file .sql/.txt trong thu muc nay co chua "CREATE TABLE".
+File nay (khong co dong CREATE TABLE) se KHONG bi tool nham thanh file de.
+
+De mau de doi chieu (khong dung de chay truc tiep) nam o test/fixtures/.

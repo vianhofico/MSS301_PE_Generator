@@ -744,7 +744,9 @@ class Interview {
             svc.pkg = Ask.ask(svc.project + ".pkg", "  Package goc cua '" + svc.project + "'", svc.pkg);
         }
 
-        s.gatewayProject = Ask.ask("gatewayProject", "Ten project Gateway", s.studentId + "HotelGateway");
+        s.gatewayProject = Ask.askRequired("gatewayProject",
+                "Ten project Gateway (dung dung ten trong de, vd " + s.studentId + "HotelGateway hoac "
+                        + s.studentId + "EmployeeGateway)");
         s.gatewayPort = Ask.askRequiredInt("gatewayPort", "Port Gateway (goi y 8080, doc dung trong de)");
 
         Out.section("4. TUNG ENTITY");
